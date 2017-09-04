@@ -2,6 +2,7 @@
   "name": "wedding_site",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://myname.github.io/myapp",
   "devDependencies": {
     "react-scripts": "1.0.11"
   },
@@ -15,6 +16,7 @@
     "react-google-maps": "^7.2.0",
     "react-map-gl": "^3.0.4",
     "react-router-dom": "^4.1.2",
+    "react-spinkit": "^3.0.0",
     "styled-components": "^2.1.2"
   },
   "scripts": {

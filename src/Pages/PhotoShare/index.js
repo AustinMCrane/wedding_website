@@ -5,7 +5,7 @@ import Card, { CardHeader, CardBody } from '../../Components/Card';
 import HeroImage from '../../Components/HeroImage';
 import { ButtonLink } from '../../Components/Button';
 import PostCreate from './PostCreate';
-import Dropzone from 'react-dropzone';
+import Spinner from 'react-spinkit';
 import {
   Route,
 } from 'react-router';
@@ -27,7 +27,9 @@ class PostIndex extends Component {
       return (
         <Card>
           <CardHeader>
-            <HeroImage src={ t.imageUrl } />
+            <a href={t.imageUrl}>
+              <HeroImage src={ t.imageUrl }/>
+            </a>
           </CardHeader>
           <CardBody>
             { t.body }
@@ -35,6 +37,8 @@ class PostIndex extends Component {
         </Card>
       );
     });
+    if (timelines.length === 0)
+      timelines.push(<Spinner />);
     return (
       <div>
         <div className="container">
